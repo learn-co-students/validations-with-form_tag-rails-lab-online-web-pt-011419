@@ -20,7 +20,6 @@ class AuthorsController < ApplicationController
    def update
     @author = Author.find(params[:id])
     if @author.valid?
-      @author.update(post_params)
       @author.save 
     redirect_to author_path(@author)
     else
